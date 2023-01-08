@@ -11,7 +11,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * @copyright 公众号：bugstack虫洞栈 | 博客：https://bugstack.cn - 沉淀、分享、成长，让自己和他人都能有所收获！
  */
 public class BeanFactory {
-
+    /**
+     * 用于存储Bean对象
+     */
     private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
 
     public Object getBean(String name) {

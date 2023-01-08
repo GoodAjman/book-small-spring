@@ -29,5 +29,18 @@ public class CglibSubclassingInstantiationStrategy implements InstantiationStrat
         if (null == ctor) return enhancer.create();
         return enhancer.create(ctor.getParameterTypes(), args);
     }
+    /**
+     * 便于理解，贴下test的代码
+     * Enhancer enhancer = new Enhancer();
+     *         enhancer.setSuperclass(UserService.class);
+     *         enhancer.setCallback(new NoOp() {
+     *             @Override
+     *             public int hashCode() {
+     *                 return super.hashCode();
+     *             }
+     *         });
+     *         Object obj = enhancer.create(new Class[]{String.class}, new Object[]{"小傅哥"});
+     *         System.out.println(obj);
+     */
 
 }
